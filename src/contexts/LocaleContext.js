@@ -1,5 +1,12 @@
-import { createContext } from "react";
+function LocaleSelect({ value, onChange }) {
+  const handleChange = (e) => onChange(e.target.value);
 
-const LocaleContext = createContext();
+  return (
+    <select value={value} onChange={handleChange}>
+      <option value="ko">한국어</option>
+      <option value="en">English</option>
+    </select>
+  );
+}
 
-export default LocaleContext;
+export default LocaleSelect;
